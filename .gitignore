@@ -17,7 +17,7 @@
 .env.production.local
 
 #css ignore
-src/**/*.css
+*.css
 
 npm-debug.log*
 yarn-debug.log*
