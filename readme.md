@@ -2,7 +2,7 @@
 
 Highly scalable React-Redux starter kit
 
-> Hot module replacement support
-> Use sass for writing structural css
-> Highly scalable redux architecture
-> Write reusable and beautiful code with components and connectors 
+1. Hot module replacement support
+2. Use sass for writing structural css
+3. Highly scalable redux architecture
+4. Write reusable and beautiful code with components and connectors 
