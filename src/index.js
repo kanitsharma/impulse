@@ -1,27 +1,15 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
-import Store from "./store/store";
-
-import Home from "./connectors/home/main";
 import "./base.css";
-import registerServiceWorker from "./registerServiceWorker";
+import { renderLoader } from "./futils/renderloader";
 
-const render = () => {
-  ReactDOM.render(
-    <Provider store={Store}>
-      <Home />
-    </Provider>,
-    document.getElementById("root")
-  );
-};
+renderLoader().then(({ render, remove }) => {
+  // Render a loader here without react
+  render();
 
-if (module.hot) {
-  module.hot.accept("./connectors/home/main", () => {
-    render();
-  });
-}
-
-render();
-
-registerServiceWorker();
+  // Meanwhile loading other chunks
+  Promise.all([
+    import(/* webpackChunkName: "core" */ "./core"),
+    import(/* webpackChunkName: "store" */ "./store")
+  ])
+    .then(([{ Core }, { Store }]) => Core(Store))
+    .then(_ => remove());
+});
