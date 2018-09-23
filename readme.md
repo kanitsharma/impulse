@@ -8,7 +8,7 @@
 
 - Contains latest tools like React 16, webpack 4, Babel 7.
 - Next Generation Routing with @reach/router
-- Component and Route level code-splitting with React-Loadable nad @reach/router
+- Component and Route level code-splitting with React-Loadable and @reach/router
 - Css-in-js with React-Emotion
 - Manage side-effects using Redux-Most and Most.js
 - Out of the box support for Sass/Scss, .graphql and svgs
