@@ -1,5 +1,3 @@
-"use strict";
-
 const autoprefixer = require("autoprefixer");
 const path = require("path");
 const webpack = require("webpack");
@@ -12,7 +10,6 @@ const getCSSModuleLocalIdent = require("react-dev-utils/getCSSModuleLocalIdent")
 const getClientEnvironment = require("./env");
 const paths = require("./paths");
 const ManifestPlugin = require("webpack-manifest-plugin");
-const getCacheIdentifier = require("react-dev-utils/getCacheIdentifier");
 const WebpackBar = require("webpackbar");
 
 // Webpack uses `publicPath` to determine where the app is being served from.
