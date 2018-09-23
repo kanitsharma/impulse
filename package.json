@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-redux": "^5.0.7",
-    "redux": "^4.0.0",
-    "react": "^16.5.2"
+    "redux": "^4.0.0"
   },
   "devDependencies": {
     "@babel/core": "7.1.0",
@@ -59,6 +59,7 @@
     "webpack": "^4.19.1",
     "webpack-dev-server": "3.1.8",
     "webpack-manifest-plugin": "2.0.4",
+    "webpackbar": "^2.6.3",
     "whatwg-fetch": "3.0.0"
   },
   "scripts": {

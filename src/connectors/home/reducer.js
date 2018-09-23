@@ -1,11 +1,12 @@
-import createReducer from '../../futils/createReducer'
+import createReducer from "../../futils/createReducer";
 
 const initialState = {
-  showText: true
-}
+  showText: true,
+  test: false
+};
 
 const actionHandlers = {
-  TOGGLE_TEXT: (s, a) => ({ ...s, showText: !s.showText }),
-}
+  TOGGLE_TEXT: (s, a) => ({ ...s, showText: !s.showText })
+};
 
-export default createReducer(initialState, actionHandlers)
+export default createReducer(initialState, actionHandlers);
