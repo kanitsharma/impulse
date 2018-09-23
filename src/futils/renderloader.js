@@ -5,7 +5,7 @@ const Loader = `
 
 const getNode = () => document.getElementById("loader");
 
-export const renderLoader = () =>
+export default () =>
   new Promise(resolve => {
     const node = getNode();
     const render = () => {

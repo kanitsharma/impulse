@@ -17,7 +17,7 @@ const Store = createStore(
   )
 );
 
-//enabling HMR
+// enabling HMR
 if (process.env.NODE_ENV !== "production") {
   if (module.hot) {
     module.hot.accept("./rootReducer", () => {

@@ -1,5 +1,5 @@
 import "./critical.scss";
-import { renderLoader } from "./futils/renderloader";
+import renderLoader from "./futils/renderloader";
 
 renderLoader().then(({ render, remove }) => {
   // Render a loader here without react
@@ -11,5 +11,5 @@ renderLoader().then(({ render, remove }) => {
     import(/* webpackChunkName: "store" */ "./store")
   ])
     .then(([{ Core }, { Store }]) => Core(Store))
-    .then(_ => remove());
+    .then(() => remove());
 });

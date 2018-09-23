@@ -5,7 +5,7 @@ const initialState = {
 };
 
 const actionHandlers = {
-  TOGGLE_POPUP: (s, a) => ({ ...s, popup: !s.popup })
+  TOGGLE_POPUP: s => ({ ...s, popup: !s.popup })
 };
 
 export default createReducer(initialState, actionHandlers);

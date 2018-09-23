@@ -6,7 +6,7 @@ import Popup from "../../components/popup";
 
 const Home = ({ togglePopup, popup }) => (
   <div>
-    <Button onClick={_ => togglePopup()}>Toggle Popup</Button>
+    <Button onClick={togglePopup}>Toggle Popup</Button>
     {popup && <Popup togglePopup={togglePopup} />}
   </div>
 );
