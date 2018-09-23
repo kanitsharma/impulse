@@ -1,12 +1,11 @@
 import createReducer from "../../futils/createReducer";
 
 const initialState = {
-  showText: true,
-  test: false
+  popup: false
 };
 
 const actionHandlers = {
-  TOGGLE_TEXT: (s, a) => ({ ...s, showText: !s.showText })
+  TOGGLE_POPUP: (s, a) => ({ ...s, popup: !s.popup })
 };
 
 export default createReducer(initialState, actionHandlers);

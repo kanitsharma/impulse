@@ -1,4 +1,4 @@
-import "./base.css";
+import "./critical.css";
 import { renderLoader } from "./futils/renderloader";
 
 renderLoader().then(({ render, remove }) => {

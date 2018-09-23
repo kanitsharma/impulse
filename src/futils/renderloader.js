@@ -1,17 +1,17 @@
-const getLoader = () => {
-  const Loader = document.getElementById("loader");
-  return Loader;
-};
+// Add your favourite CSS/SVG loader here
+const Loader = `
+  <div class="lds-ripple"><div></div><div></div></div>
+`;
+
+const getNode = () => document.getElementById("loader");
 
 export const renderLoader = () =>
   new Promise(resolve => {
-    const Loader = getLoader();
+    const node = getNode();
     const render = () => {
-      Loader.innerHTML = `
-      <div class="lds-ripple"><div></div><div></div></div>
-    `;
+      node.innerHTML = Loader;
     };
-    const remove = () => document.body.removeChild(Loader);
+    const remove = () => document.body.removeChild(node);
 
     resolve({ render, remove });
   });

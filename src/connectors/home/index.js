@@ -1,28 +1,7 @@
+import Loadable from "react-loadable";
 import React from "react";
-import { connect } from "react-redux";
-import actionSpreader from "../../futils/actionSpreader";
 
-const Home = props => (
-  <div>
-    <div onClick={props.toggleText}>Toggle Text</div>
-    {props.showText && (
-      <div>
-        Korem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum
-      </div>
-    )}
-  </div>
-);
-
-const mapStateToProps = state => ({
-  showText: state.home.showText
+export default Loadable({
+  loader: () => import(/* webpackChunkName: "home" */ "./home"),
+  loading: () => <div />
 });
-
-const mapDispatchToProps = dispatch => ({
-  toggleText: () => dispatch(actionSpreader("TOGGLE_TEXT"))
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Home);
