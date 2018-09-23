@@ -3,6 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "react-dom": "^16.5.2",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "react": "^16.5.2"
+  },
+  "devDependencies": {
     "@babel/core": "7.1.0",
     "@babel/runtime": "7.0.0",
     "@svgr/webpack": "2.4.1",
@@ -42,9 +48,7 @@
     "postcss-safe-parser": "4.0.1",
     "promise": "8.0.2",
     "raf": "3.4.0",
-    "react": "^16.5.2",
     "react-dev-utils": "6.0.0-next.2150693d",
-    "react-dom": "^16.5.2",
     "resolve": "1.8.1",
     "sass-loader": "7.1.0",
     "style-loader": "0.23.0",
