@@ -10,7 +10,7 @@
 - Next Generation Routing with @reach/router
 - Component and Route level code-splitting with React-Loadable and @reach/router
 - Css-in-js with React-Emotion
-- Manage side-effects using Redux-Most and Most.js
+- Manage side-effects using Redux-saga
 - Out of the box support for Sass/Scss, .graphql and svgs
 - Testing with Jest
 
@@ -44,15 +44,11 @@
 
 - Extremely easy and intuitive routing with @reach/router
 
-### Redux-Most and Most.js
+### Redux-Saga
 
-<img src="codeimgs/most.png" />
+- Redux saga provides imperative way to layout your side effects.
 
-- Redux-most much like redux-observable provide managing of side effects using streams, but it is extremely fast and in conjunction with ramda it provides pure, declarative and functional way of managing side-effects.
-
-### Why redux-most or redux-observable over redux-saga?
-
-- Redux-saga is nice. It's a sophisticated approach to handling asynchronous actions with Redux and can handle very complicated tasks with ease. However, due to generators being pull-based, it is much more imperative in nature. I simply prefer the more declarative style of push-based streams & reactive programming.
+- Redux saga provides a huge set of utilities.
 
 ## Quick Start
 
