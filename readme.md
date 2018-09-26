@@ -10,7 +10,7 @@
 - Next Generation Routing with @reach/router
 - Component and Route level code-splitting with React-Loadable and @reach/router
 - Css-in-js with React-Emotion
-- Manage side-effects using Redux-Most and Most.js
+- Manage side-effects using Redux-Most(Most.js) or Redux-Saga
 - Out of the box support for Sass/Scss, .graphql and svgs
 - Testing with Jest
 
@@ -45,6 +45,8 @@
 - Extremely easy and intuitive routing with @reach/router
 
 ### Redux-Most and Most.js
+
+#### Checkout to branch `redux-saga` to use redux-saga.
 
 <img src="codeimgs/most.png" />
 
