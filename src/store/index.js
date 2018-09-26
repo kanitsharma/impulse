@@ -1,21 +1,19 @@
 import { createStore, applyMiddleware, compose } from "redux";
-import { createEpicMiddleware, createStateStreamEnhancer } from "redux-most";
+import createSagaMiddleware from "redux-saga";
 import logger from "redux-logger";
 
 import rootReducer from "./rootReducer";
-import rootEpic from "./rootEpic";
+import rootSaga from "./rootSaga";
 
 // Store setup
-const epicMiddleware = createEpicMiddleware(rootEpic);
-const middlewares = [logger];
+const sagaMiddleware = createSagaMiddleware(rootSaga);
+const middlewares = [logger, sagaMiddleware];
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const Store = createStore(
   rootReducer,
-  composeEnhancers(
-    createStateStreamEnhancer(epicMiddleware),
-    applyMiddleware(...middlewares)
-  )
+  composeEnhancers(applyMiddleware(...middlewares))
 );
+sagaMiddleware.run(rootSaga);
 
 // enabling HMR
 if (process.env.NODE_ENV !== "production") {
@@ -26,9 +24,9 @@ if (process.env.NODE_ENV !== "production") {
       });
     });
 
-    module.hot.accept("./rootEpic", () => {
-      import("./rootEpic").then(({ default: nextRootEpic }) => {
-        epicMiddleware.replaceEpic(nextRootEpic);
+    module.hot.accept("./rootSaga", () => {
+      import("./rootSaga").then(({ default: nextRootSaga }) => {
+        sagaMiddleware.run(nextRootSaga);
       });
     });
   }
