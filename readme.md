@@ -26,6 +26,9 @@
 
 - Split your Redux store, Views (Components and Connectors) into different chunks and show a loader even before react loads, this gives a extremely fast initial paint.
 
+<img src="codeimgs/performance.png" />
+<strong>First paint contains loader :smile:</strong>
+
 - Split your Routes and React components using react loadable.
 
 - Babel-preset-env compiles all node_modules and creates separate vendors~chunks for each our code chunk.
