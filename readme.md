@@ -26,8 +26,7 @@
 
 - Split your Redux store, Views (Components and Connectors) into different chunks and show a loader even before react loads, this gives a extremely fast initial paint.
 
-<img src="codeimgs/performance.png" />
-<strong>First paint contains loader :smile:</strong>
+<img src="codeimgs/performance.png" /> ^^^^^ First paint contains loader :smile: ^^^^^
 
 - Split your Routes and React components using react loadable.
 
