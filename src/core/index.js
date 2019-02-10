@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { Router } from "@reach/router";
@@ -7,11 +7,13 @@ import Home from "../connectors/home";
 export const Core = Store => {
   const render = () => {
     ReactDOM.render(
-      <Provider store={Store}>
-        <Router>
-          <Home path="/" />
-        </Router>
-      </Provider>,
+      <Suspense fallback={<div>Loading...</div>}>
+        <Provider store={Store}>
+          <Router>
+            <Home path="/" />
+          </Router>
+        </Provider>
+      </Suspense>,
       document.getElementById("root")
     );
   };

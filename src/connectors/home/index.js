@@ -1,6 +1,3 @@
-// export default Loadable({
-//   loader: () => import(/* webpackChunkName: "home" */ "./home"),
-//   loading: () => <div />
-// });
+import React from "react";
 
-export { default } from "./home";
+export default React.lazy(() => import("./home"));
