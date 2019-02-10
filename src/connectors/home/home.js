@@ -1,14 +1,13 @@
 import React from "react";
 import { connect } from "react-redux";
 import actionSpreader from "../../futils/actionSpreader";
-// import Button from "../../components/button";
-// import Popup from "../../components/popup";
+import Button from "../../components/button";
+import Popup from "../../components/popup";
 
-const Home = () => (
+const Home = ({ togglePopup, popup }) => (
   <div>
-    {/* <Button onClick={togglePopup}>Toggle Popup</Button>
-    {popup && <Popup togglePopup={togglePopup} />} */}
-    Home
+    <Button onClick={togglePopup}>Toggle Popup</Button>
+    {popup && <Popup togglePopup={togglePopup} />}
   </div>
 );
 

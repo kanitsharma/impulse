@@ -1,17 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-// import { Router } from "@reach/router";
-// import Home from "../connectors/home";
+import { Router } from "@reach/router";
+import Home from "../connectors/home";
 
 export const Core = Store => {
   const render = () => {
     ReactDOM.render(
       <Provider store={Store}>
-        {/* <Router>
+        <Router>
           <Home path="/" />
-        </Router> */}
-        Yo
+        </Router>
       </Provider>,
       document.getElementById("root")
     );

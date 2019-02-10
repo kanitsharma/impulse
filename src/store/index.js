@@ -1,20 +1,20 @@
-import { createStore } from "redux";
+import { createStore, applyMiddleware, compose } from "redux";
 // import { createEpicMiddleware, createStateStreamEnhancer } from "redux-most";
-// import logger from "redux-logger";
+import logger from "redux-logger";
 
 import rootReducer from "./rootReducer";
 // import rootEpic from "./rootEpic";
 
 // Store setup
 // const epicMiddleware = createEpicMiddleware(rootEpic);
-// const middlewares = [logger];
-// const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const middlewares = [logger];
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const Store = createStore(
-  rootReducer
-  // composeEnhancers(
-  //   createStateStreamEnhancer(epicMiddleware),
-  //   applyMiddleware(...middlewares)
-  // )
+  rootReducer,
+  composeEnhancers(
+    // createStateStreamEnhancer(epicMiddleware),
+    applyMiddleware(...middlewares)
+  )
 );
 
 // enabling HMR
