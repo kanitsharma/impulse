@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Button from "./button";
 
-const PopupContainer = styled("div")`
+const PopupContainer = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.6);
@@ -15,7 +15,7 @@ const PopupContainer = styled("div")`
   z-index: 10;
 `;
 
-const Popup = styled("div")`
+const Popup = styled.div`
   width: 30%;
   height: 20%;
   background-color: #fff;
@@ -26,7 +26,7 @@ const Popup = styled("div")`
   text-align: center;
 `;
 
-const PopupHeader = styled("h1")`
+const PopupHeader = styled.h1`
   color: #070707;
   margin-bottom: 20px;
 `;
