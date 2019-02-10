@@ -22,11 +22,11 @@
 
 ### Hardcore Code Splitting
 
-<img src="codeimgs/cs.png" />
+<img src="codeimgs/cs.png" height="400"  />
 
 - Split your Redux store, Views (Components and Connectors) into different chunks and show a loader even before react loads, this gives a extremely fast initial paint.
 
-<img src="codeimgs/performance.png" /> ^^^^^ First paint contains loader :smile: ^^^^^
+<img src="codeimgs/performance.png" height="400" /> ^^^^^ First paint contains loader :smile: ^^^^^
 
 - Split your Routes and React components using React.lazy.
 
@@ -40,7 +40,7 @@
 
 ### Next generation routing with @reach/router
 
-<img src="codeimgs/routes.png" />
+<img src="codeimgs/routes.png"  height="400" />
 
 - Extremely easy and intuitive routing with @reach/router
 
