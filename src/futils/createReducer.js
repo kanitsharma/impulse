@@ -1,3 +1,4 @@
+/* eslint-disable */
 export default (initialState, actionHandlers) => (
   state = initialState,
   action
